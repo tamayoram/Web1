@@ -45,7 +45,7 @@
     // el selector y el case tienen que ser del mismo tipo
     // si no se incluye los break se ejecutan todos los casos
 
-    $selector="m";
+    $selector="a";
     
     switch($selector)
     {
@@ -78,6 +78,3 @@
     {
         echo "<li>Valor:".$i."</li>";
     }
-
-    
-?>

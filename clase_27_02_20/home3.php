@@ -14,12 +14,15 @@
         <div class="row">
 
             <?php
+            $oscuro="Tarjetas negras";
+            $juego1="Juego número 1";
+            $Mensaje1="Corresponde al primer equipo de jugadores";
             $card = "<div class='col-sm'>
                 <div class='card text-white bg-dark mb-3' style='max-width: 18rem;'>
-                    <div class='card-header'>Header</div>
+                    <div class='card-header'>$oscuro</div>
                     <div class='card-body'>
-                        <h5 class='card-title'>Dark card title</h5>
-                        <p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card content.</p>
+                        <h5 class='card-title'>$juego1</h5>
+                        <p class='card-text'>$Mensaje1</p>
                     </div>
                 </div>
             </div>";
@@ -28,6 +31,31 @@
                 echo $card;
             }
             ?>
+        </div>
+
+        <div class="row">
+
+            <?php
+            $claras="Tarjetas claras";
+            $juego2="Juego número 2";
+            $Mensaje2="Corresponde al segundo equipo de jugadores";
+            $card = "<div class='col-sm'>
+                <div class='card bg-light mb-3' style='max-width: 18rem;'>
+                    <div class='card-header'>$claras</div>
+                    <div class='card-body'>
+                        <h5 class='card-title'>$juego2</h5>
+                        <p class='card-text'>$Mensaje2</p>
+                    </div>
+                </div>
+            </div>";
+
+            for ($i = 0; $i < 6; $i++) {
+                echo $card;
+            }
+            ?>
+
+
+
         </div>
     </div>
 
