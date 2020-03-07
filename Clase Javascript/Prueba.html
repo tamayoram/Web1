@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+    <script>
+
+        /*
+        let numero1 = 3;
+        let numero2 = 5;
+        let total = numero1 + numero2;
+
+        //console.log("El total es: "+total);
+        //alert("El total es: " + total);
+
+        let username = prompt("Ingrese usuario");
+
+        console.log(username);
+        alert("Bienvenido "+username);
+        */
+
+
+        /*
+
+        let operacion = prompt("Ingrese el caracter de la operación a realizar: -,*,+,/");
+
+        let number1 = parseFloat(prompt("Ingrese el primer número"));
+        let number2 = parseFloat(prompt("Ingrese el segundo número"));
+        let number3 = parseFloat(prompt("Ingrese el tercero número"));
+
+        //importante inicializar para declarar la variable como global
+        let total = 0;
+*/
+
+
+        // parseInt, parseFloat, parseDouble, parseString, parseChar para enteros
+        //let total = number1 + number2;
+
+        //alert(total);
+
+        //estructura switch
+
+        /*
+                switch (operacion) {
+
+                    case "+":
+                        total = number1 + number2 + number3;
+                        alert("El total es: " + total);
+                        break;
+
+                    case "*":
+                        total = number1 * number2 * number3;
+                        alert("El total es: " + total);
+                        break;
+
+                    case "/":
+                        total = number1 / number2 / number3;
+                        alert("El total es: " + total);
+                        break;
+
+
+                    case "-":
+                        total = number1 - number2 - number3;
+                        alert("El total es: " + total);
+                        break;
+
+                }
+
+                */
+
+
+
+        //estructura if
+
+        /*
+        if (number1 > number2 && number1 > number3) {
+            alert("Number 1 es mayor");
+        }
+        else if (number2 > number3) {
+
+            alert("Number 2 es mayor");
+        }
+
+        else {
+
+            alert("Number 3 es mayor");
+
+        }
+        */
+
+
+
+        //estructura for
+        /*
+        let total = 0;
+        let numberTimes=parseInt(prompt("Ingrese la cantidad de numeros a sumar: "));
+
+        for (let i = 1; i <= numberTimes; i++) {
+
+            let number = parseInt(prompt("Ingrese el número: " + i));
+
+            total = total + number;
+
+        }
+
+        alert("Suma: "+total+" "+"Promedio: "+(total/numberTimes));
+
+        */
+
+        //estructura while
+
+        /*
+        let total = 0;
+        let numberTimes = parseInt(prompt("Ingrese la cantidad de numeros a sumar: "));
+
+        let count = 1;
+        while (count <= numberTimes) {
+
+            let number = parseInt(prompt("Ingrese el número " + count));
+            total = total + number;
+            count = count + 1;
+
+        }
+        
+        alert("Suma: " + total + " " + "Promedio: " + (total / numberTimes));
+        */
+
+        /*
+        
+        let total = 0;
+        let numberTimes = parseInt(prompt("Ingrese la cantidad de numeros a sumar: "));
+
+        let count = 1;
+        while (true) {
+
+            let number = parseInt(prompt("Ingrese el número " + count));
+            total = total + number;
+            count = count + 1;
+
+            // break para romper ciclos infinitos
+            if(count==6){
+                break;
+            }
+
+        }
+        
+        alert("Suma: " + total + " " + "Promedio: " + (total / numberTimes));
+
+        */
+
+
+
+          /* while (true) {
+
+            let option = prompt("Ingrese suma o resta");
+
+            // el === compara también el tipo de la variable
+            if (option === "suma" || option === "resta") {
+                break;
+            }
+            else{
+                alert("Existe un error, por favor revisar la escritura");
+            }
+
+        }
+          */
+
+            let number=prompt("Ingrese un número");
+                       
+            if (!isNaN(number)) {
+                
+                alert("Es un número");
+            }
+
+            else {
+                alert("Debe ser un número");
+            } 
+
+    </script>
+
+</body>
+
+</html>
