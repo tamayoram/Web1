@@ -11,7 +11,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">RAUL MOREIRA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -68,8 +68,11 @@
         <img class="d-block w-100" src="imagen/imagen1.jpg" alt="First slide" style="width:800px;height:600px;">
       </div>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Todo en uno. Diseño, web e impresión</h5>
-        <p>Diseño gráfico,maquetación,logotipos,ilustración, producción e impresión</p>
+        <h5>Todo en uno. Diseño, Web e impresión.</h5>
+        <p>Diseño gráfico,maquetación,logotipos,ilustración, producción e impresión,</p>
+        <p>diseño de páginas web,programación, alta y posicionamiento en buscadores.</p>
+        <p>Todo al mejor precio y en Madrid.</p>
+        <a href="formulario.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Contacta ahora</a>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="imagen/imagen2.jpg" alt="Second slide" style="width:800px;height:600px;">
@@ -88,40 +91,162 @@
     </a>
   </div>
 
-  <div class="container">
+  <div class="container my-3">
     <div class="row">
       <div class="col">
         <div class="card" style="width:300px">
-          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <img class="mx-auto" src="iconos/icono1.jpg" alt="Card image" style="width:180px">
           <div class="card-body">
-            
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card" style="width:300px">
-          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <img class="mx-auto" src="iconos/icono2.jpg" alt="Card image" style="width:180px">
           <div class="card-body">
-         
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card" style="width:300px">
-          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+          <img class="mx-auto" src="iconos/icono3.jpg" alt="Card image" style="width:100px">
           <div class="card-body">
-            <h4 class="card-title">John Doe</h4>
-            <p class="card-text">Some example text.</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
+
+            <p class="card-text">>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
           </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono1.jpg" alt="Card image" style="width:180px">
+          <div class="card-body">
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono2.jpg" alt="Card image" style="width:180px">
+          <div class="card-body">
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono3.jpg" alt="Card image" style="width:100px">
+          <div class="card-body">
+
+            <p class="card-text">>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono1.jpg" alt="Card image" style="width:180px">
+          <div class="card-body">
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono2.jpg" alt="Card image" style="width:180px">
+          <div class="card-body">
+
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:300px">
+          <img class="mx-auto" src="iconos/icono3.jpg" alt="Card image" style="width:100px">
+          <div class="card-body">
+
+            <p class="card-text">>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <button type="button" class="btn btn-outline-info">Conocer más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-9">
+        <h3 style="color:#FF0000" ;>Ilustraciones profesionales</h3>
+        <br>
+        <h3>Sube el nivel y seduce a tus clientes</h3>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book/p>
+      </div>
+      <div class="col-3">
+        <img src="imagen/imagen4.jpg" class="img-rounded" alt="Joker" style="width:200px">
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-5">
+        <img src="imagen/imagen5.jpg" class="img-rounded h-100 w-100" alt="Joker" style="width:300px">
+      </div>
+      <div class="col-7">
+
+        <h3 class="text-success">Cuanto cuesta una página web?</h3>
+        <br>
+        <h3 class="text-info">Consulta nuestros servicios y precios</h3>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <h3 class="mx-auto">Acceso rápido a nuestros servicios</h3>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col">
+        <h4>Diseño y desarrollo web</h4>
+        <h5>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</h5>
+      </div>
+      <div class="col">
+      <h4 class="mx-auto text-dark">Diseño Gráfico</h4>
+        <h5>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</h5>
+      </div>
+      <div class="col">
+      <h4>Ilustración</h4>
+        <h5>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</h5>
+      </div>
+      <div class="col">
+      <h4>Otros servicios</h4>
+        <h5>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</h5>
+      </div>
+    </div>
+  </div>
+
 
 
 
