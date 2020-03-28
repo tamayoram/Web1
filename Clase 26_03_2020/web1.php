@@ -34,30 +34,26 @@ class Persona
 
     // métodos
 
+    // en los métodos la primera palabra en minuscula y las otras en mayúscula
+
     public function addPerson($name, $lastname)
     {
 
         //modificar atributos
+        //$this permite modificar atributos. This sirve para señalar al lenguaje que es lo que se va a modificar.
+
         $this->nombre[] = $name;
         $this->apellido[] = $lastname;
     }
 
-    public function hablar($mensaje)
+    public function showPeople()
     {
 
-        echo $mensaje;
-    }
-
-    public function mostraPersonas()
-    {
-
+        //count es para definir el número de elementos que tiene el vector nombre
         for ($i = 0; $i < count($this->nombre); $i++) {
 
             /*  print "nombre: ".$this->nombre[$i]. " apellido: ".$this->apellido[$i]."<br>"; */
 
-            // this se utiliza para llamar el método format dentro del método mostraPersonas
-
-            // dice algo del método format del vector nombre del vector apellido
 
             $this->format($this->nombre[$i], $this->apellido[$i]);
         }
@@ -66,7 +62,7 @@ class Persona
     public function format($name, $lastname)
     {
 
-        print "nombre: " . $name . " apellido: " . $lastname;
+        print " nombre: " . $name . " apellido: " . $lastname."<br>";
     }
 }
 
@@ -79,7 +75,7 @@ $persona->addPerson("Iveth", "Zapata");
 $persona2->addPerson("Camilo", "Tamayo");
 $persona2->addPerson("Julian", "Zapata");
 
-$persona->mostraPersonas();
-$persona2->mostraPersonas();
+$persona->showPeople();
+$persona2->showPeople();
 
 
