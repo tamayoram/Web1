@@ -7,6 +7,7 @@
             <th>Id</th>
             <th>Task</th>
             <th>Date</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +36,7 @@
                 <td>{$row['Id']}</td>
                 <td>{$row['task']}</td>
                 <td>{$row['date']}</td>
+                <td><a href='edit_task.php?Id={$row['Id']}' class='badge badge-primary'>Edit</a> <a href='delete_task.php?Id={$row['Id']}' class='badge badge-danger'>Delete</a></td>
                                
                 </tr>";
                 }

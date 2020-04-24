@@ -18,6 +18,7 @@ if (isset($_POST['task']) && ($_POST['date'])) {
         require_once "db_connection.php";
         $sql = "INSERT INTO tasks (task,date) VALUES ('{$taskName}', '{$taskDate}')";
         $result = $conn->query($sql);
+        header("location:index.php");
     } catch (exception $Error) {
         echo "Connection failed";
     }
