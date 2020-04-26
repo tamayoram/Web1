@@ -6,8 +6,25 @@
 
 // post es mejor para agregar datos a la base de datos, mientras get es mejor para obtener datos de la misma. Esto porque get muestra los datos en la URL.
 
+if (isset($_POST['task'])) {
 
-if (isset($_POST['task']) && ($_POST['date'])) {
+    $taskName = $_POST['task'];
+    $taskDate = $_POST['date'];
+
+    try {
+
+        include_once "db_connection.php";
+        $sql = "INSERT INTO tasks (task,date) VALUES ('{$taskName}', '{$taskDate}')";
+        $result = $conn->query($sql);
+
+        header("location:index.php");
+    } catch (exception $Error) {
+        echo "Connection failed";
+    }
+}   
+
+
+/* if (isset($_POST['task']) && ($_POST['date'])) {
 
     $taskName = $_POST['task'];
     $taskDate = $_POST['date'];
@@ -15,10 +32,12 @@ if (isset($_POST['task']) && ($_POST['date'])) {
 
     try {
 
-        require_once "db_connection.php";
+        include_once "db_connection.php";
         $sql = "INSERT INTO tasks (task,date) VALUES ('{$taskName}', '{$taskDate}')";
         $result = $conn->query($sql);
+       
         header("location:index.php");
+   
     } catch (exception $Error) {
         echo "Connection failed";
     }
@@ -51,3 +70,4 @@ if (isset($_POST['task']) && ($_POST['date'])) {
     echo "$alertTemplate";
     include_once('layouts/footer.php');
 }
+ */

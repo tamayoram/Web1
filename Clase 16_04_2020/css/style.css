@@ -1,0 +1,19 @@
+.table_css {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 12px;
+    margin:auto;
+    
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: rgb(82, 83, 82);
+    color: white;
+  }

@@ -1,8 +1,21 @@
 <?php include_once('layouts/header.php'); ?>
 
-<table class="table table-bordered table-hover mt-5 text-center">
+<script>
 
-    <thead class="thead-light">
+function DeleteRegistry(id){
+
+    if(confirm('Desea eliminar el registro?')){
+
+        document.location='delete_task.php?Id='+id;
+    }
+}
+
+</script>
+
+
+
+<table class="table_css">
+    <thead>
         <tr>
             <th>Id</th>
             <th>Task</th>
@@ -36,7 +49,7 @@
                 <td>{$row['Id']}</td>
                 <td>{$row['task']}</td>
                 <td>{$row['date']}</td>
-                <td><a href='edit_task.php?Id={$row['Id']}' class='badge badge-primary'>Edit</a> <a href='delete_task.php?Id={$row['Id']}' class='badge badge-danger'>Delete</a></td>
+                <td><a href='edit_task.php?Id={$row['Id']}' class='badge badge-primary'>Edit</a> <a href='javascript:DeleteRegistry({$row['Id']})' class='badge badge-danger'>Delete</a></td>
                                
                 </tr>";
                 }
@@ -49,7 +62,7 @@
         ?>
 
     </tbody>
-
 </table>
+
 
 <?php include_once('layouts/footer.php'); ?>

@@ -1,3 +1,4 @@
+
 <?php
 
 if (isset($_GET['Id'])){
@@ -10,11 +11,12 @@ if (isset($_GET['Id'])){
     if ($result->num_rows > 0) {
 
     ($row = $result->fetch_assoc());
-          
+              
     }
 
-?>
+}
 
+?>
 
 <?php include_once('layouts/header.php');?> <!--instrucción para llamar la parte de arriba de la página-->
 
@@ -22,21 +24,23 @@ if (isset($_GET['Id'])){
     <div class="form-group row">
         <label for="task" class="col-sm-2 col-form-label">Task</label>
         <div class="col-sm-10">
-            <input type="text" value= "<?php echo $row['task']?>" name="task" class="form-control" id="task"> <!--muy importante ingresar el name, porque ahí se almacena la información que va a enviar el form-->
+            <input type="text" value= "<?php echo $row['task'] ?>" name="task" class="form-control" id="task"> <!--muy importante ingresar el name, porque ahí se almacena la información que va a enviar el form-->
         </div>
     </div>
     <div class="form-group row">
         <label for="date" class="col-sm-2 col-form-label">Date</label>
         <div class="col-sm-10">
-            <input type="text" value= "<?php echo $row['date']?>" name="date" class="form-control" id="date"> <!--muy importante ingresar el name, porque ahí se almacena la información que va a enviar el form-->
+            <input type="text" value= "<?php echo $row['date'] ?>" name="date" class="form-control" id="date"> <!--muy importante ingresar el name, porque ahí se almacena la información que va a enviar el form-->
         </div>
     </div>
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-dark my-3">Enviar</button>
         </div>
     </div>
 </form>
 
 
 <?php include_once('layouts/footer.php');?> <!--instrucción para llamar la parte de abajo de la página-->
+
+
