@@ -2,13 +2,7 @@
 
 <script>
 
-function DeleteRegistry(id){
 
-    if(confirm('Desea eliminar el registro?')){
-
-        document.location='delete_task.php?Id='+id;
-    }
-}
 
 </script>
 

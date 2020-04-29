@@ -10,6 +10,6 @@ if ($connection->connect_error){
     die($connection->connect_error);
 }
 
-echo "Connection done";
+//echo "Connection done";
 
 ?>

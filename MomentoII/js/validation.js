@@ -1,3 +1,12 @@
+
+function DeleteRecord(idDocument){
+
+   if(confirm('¿Desea eliminar el registro?')){
+
+       document.location='delete.php?document='+idDocument;
+   }
+}
+
 function validate() {
 
    let idDocument = document.getElementById("idDocument").value;
