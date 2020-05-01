@@ -35,7 +35,7 @@ try {
                         <p class='card-text'>Celular: {$row['phone']}</p>
                     
                          <a href='javascript:DeleteRecord({$row['document']})' class='btn btn-danger float-right'>Eliminar</a>
-                        <a href='edit.php?Id={$row['document']}' class='btn btn-dark float-right'>Editar</a> 
+                        <a href='edit.php?document={$row['document']}' class='btn btn-dark float-right'>Editar</a> 
                     
                     </div>
                 </div>

@@ -1,8 +1,7 @@
 <?php
+if (isset($_GET['document'])) {
 
-if (isset($_POST['idDocument'])) {
-
-    $idDocument = $_POST['idDocument'];
+    $idDocument = $_GET['document'];
     $registryName = $_POST['name'];
     $registryLastName = $_POST['lastName'];
     $registryBirth = $_POST['birth'];
@@ -13,7 +12,7 @@ if (isset($_POST['idDocument'])) {
     try {
 
         include_once ("db_connection.php");
-        $sql = "INSERT INTO appointment (document,name,lastName,birth,city,district,phone) VALUES ({$idDocument}, '{$registryName}','{$registryLastName}','{$registryBirth}','{$registryCity}','{$registryDistrict}',{$registryPhone})";
+        $sql = "UPDATE appointment SET name='{$registryName}',lastName='{$registryLastName}',birth='{$registryBirth}',city='{$registryCity}',district='{$registryDistrict}',phone={$registryPhone} WHERE document={$idDocument}";
         $result = $connection->query($sql);
 
         header("location:index.php");
