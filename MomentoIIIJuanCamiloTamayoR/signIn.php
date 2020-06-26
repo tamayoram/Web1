@@ -9,7 +9,7 @@ if ($method === 'GET') {
     $id = $data->Identification;
 
     //ejecución de la consulta en la base de datos
-    $sql = "SELECT * FROM users WHERE Identification={$id}";
+    $sql = "SELECT * FROM users WHERE Identification='{$id}'";
     $result = $conn->query($sql);
 
     // Se crea la variable para verificar si la identificación corresponde    
@@ -23,7 +23,7 @@ if ($method === 'GET') {
         }
 
 
-        echo json_encode(array('res' => array('success' => true, 'data' => array(), 'error' => array('Title' => '', 'message' => ''))));
+        echo json_encode(array('res' => array('success' => true, 'data' =>array(), 'error' => array('Title' => '', 'message' => ''))));
     } else {
         echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => '', 'message' => '')));
     }
