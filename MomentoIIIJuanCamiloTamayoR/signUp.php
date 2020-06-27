@@ -59,6 +59,7 @@ if ($method === 'POST') {
 
                     $myArray = array('@');
 
+//verificación que el email tenga el signo de @
                     if (validation($email, $myArray) == 0) {
 
                         echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Email format', 'message' => 'Email invalid format')));
@@ -66,13 +67,17 @@ if ($method === 'POST') {
 
                         $shortEmail = substr($email, -4);
 
-
+//verificación que el email tenga el .com o el .net
                         if ($shortEmail == '.com' || $shortEmail == '.net') {
 
                             $myArray = array('!', '@', '#', '$', '%', '&', '?', '¿', '¡', '*');
 
+                            //verificación que se cumplan las validaciones del password
+
                             if (strlen($password) >= 8 && strlen($password) <= 16 && validation($password, $myArray) >= 2) {
 
+                             
+                             //verificación de el type id y el identification
                                 if ($typeid = 'Pas') {
 
                                     if (strlen($id) <= 10) {
@@ -123,5 +128,5 @@ if ($method === 'POST') {
     }
 } else {
 
-    echo json_encode(array('success' => '', 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request')));
+    echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request')));
 }

@@ -28,5 +28,5 @@ if ($method === 'GET') {
         echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => '', 'message' => '')));
     }
 } else {
-    echo json_encode(array('success' => '', 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request')));
+    echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request')));
 }
