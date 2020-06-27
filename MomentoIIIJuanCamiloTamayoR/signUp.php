@@ -42,19 +42,19 @@ if ($method === 'POST') {
         //Verificación que los campos no sean vacíos 
         if ($name == "" || $lastname == "" || $email == "" || $typeid == "" || $id == "" || $password == "") {
 
-            echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Empty field', 'message' => 'The field is empty')));
+            echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Empty field', 'message' => 'The field is empty'))));
         } else {
 
             //Verificación del tamaño de los campos name y lastname
             if (strlen($name) > 40 || strlen($lastname) > 40) {
 
-                echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Excess characters', 'message' => 'The number of characters is over 40')));
+                echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Excess characters', 'message' => 'The number of characters is over 40'))));
             } else {
 
                 //Verificación de caracteres especiales en los campos name y lastname
                 if (validation($name, $myArray) != 0 || validation($lastname, $myArray) != 0) {
 
-                    echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Special characters', 'message' => 'Invalid character')));
+                    echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Special characters', 'message' => 'Invalid character'))));
                 } else {
 
                     $myArray = array('@');
@@ -62,7 +62,7 @@ if ($method === 'POST') {
 //verificación que el email tenga el signo de @
                     if (validation($email, $myArray) == 0) {
 
-                        echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Email format', 'message' => 'Email invalid format')));
+                        echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Email format', 'message' => 'Email invalid format'))));
                     } else {
 
                         $shortEmail = substr($email, -4);
@@ -86,10 +86,10 @@ if ($method === 'POST') {
 
                                         $result = $conn->query($sql);
 
-                                        echo json_encode(array('success' => true, 'data' => array("Type_id" => $typeid, "Identification" => $id, "Name" => $name, "Lastname" => $lastname, "Email" => $email, "Password" => $password), 'error' => array('Title' => '', 'message' => '')));
+                                        echo json_encode(array('res'=>array('success' => true, 'data' => array("Type_id" => $typeid, "Identification" => $id, "Name" => $name, "Lastname" => $lastname, "Email" => $email, "Password" => $password), 'error' => array('Title' => '', 'message' => ''))));
                                     } else {
 
-                                        echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format')));
+                                        echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format'))));
                                     }
                                 } else if ($typeid = 'CC') {
 
@@ -100,23 +100,23 @@ if ($method === 'POST') {
 
                                         $result = $conn->query($sql);
 
-                                        echo json_encode(array('success' => true, 'data' => array("Type_id" => $typeid, "Identification" => $id, "Name" => $name, "Lastname" => $lastname, "Email" => $email, "Password" => $password), 'error' => array('Title' => '', 'message' => '')));
+                                        echo json_encode(array('res'=>array('success' => true, 'data' => array("Type_id" => $typeid, "Identification" => $id, "Name" => $name, "Lastname" => $lastname, "Email" => $email, "Password" => $password), 'error' => array('Title' => '', 'message' => ''))));
                                     } else {
 
-                                        echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format')));
+                                        echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format'))));
                                     }
                                 } else {
 
-                                    echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format')));
+                                    echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Identification format', 'message' => 'Identification invalid format'))));
                                 }
                             } else {
 
-                                echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Password format', 'message' => 'Password invalid format')));
+                                echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Password format', 'message' => 'Password invalid format'))));
                             }
                         } else {
 
 
-                            echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Email format', 'message' => 'Email invalid format')));
+                            echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Email format', 'message' => 'Email invalid format'))));
                         }
                     }
                 }
@@ -124,9 +124,9 @@ if ($method === 'POST') {
         }
     } else {
 
-        echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Non existent field', 'message' => 'Field does not exist')));
+        echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Non existent field', 'message' => 'Field does not exist'))));
     }
 } else {
 
-    echo json_encode(array('success' => false, 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request')));
+    echo json_encode(array('res'=>array('success' => false, 'data' => array(), 'error' => array('Title' => 'Request method', 'message' => 'Wrong request'))));
 }
